@@ -12,3 +12,28 @@ $font-default: 1.6rem; //16px
 
 //////////////////////////////////////////////////
 // MEDIA QUERY MANAGER
+
+// built desktop first!
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 21em) {
+      // 336px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 31.25em) {
+      // 500px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 40.625em) {
+      // 650px
+      @content;
+    }
+  }
+}
