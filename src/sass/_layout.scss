@@ -145,7 +145,7 @@
     background-color: $color-primary;
 
     @include respond(phone) {
-      border-radius: 0 0 1rem 1rem;
+      border-radius: 0 0 0 0;
     }
 
     &__header {
@@ -154,11 +154,12 @@
       font-size: 1.8rem;
     }
 
-    &__text {
+    &__list {
       width: 60%;
       padding-left: 3rem;
       font-size: 1.4rem;
       line-height: 1.5;
+      list-style: none;
     }
   }
 }
