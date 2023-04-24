@@ -75,6 +75,7 @@
 
       @include respond(phone) {
         font-size: 1.4rem;
+        margin-right: 0;
       }
     }
   }
@@ -91,6 +92,7 @@
 
     @include respond(phone) {
       border-radius: 0;
+      margin-bottom: 0;
     }
 
     &__header {
