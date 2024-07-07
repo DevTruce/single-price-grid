@@ -1,0 +1,176 @@
+//////////////////////////////////////////////////
+//
+
+.card {
+  height: 47.5rem;
+  width: 63.5rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  @include respond(phone) {
+    height: 72.2rem;
+    width: 31.1rem;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--top,
+  &--left,
+  &--right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &--top {
+    border-radius: 1rem 1rem 0 0;
+
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+
+    color: $color-tertiary;
+    background-color: white;
+
+    &__header--1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: $color-primary;
+
+      margin-bottom: 2.5rem;
+      padding-left: 3rem;
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+
+    &__header--2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+
+      color: $color-secondary;
+
+      margin-bottom: 1.7rem;
+      padding-left: 3rem;
+
+      @include respond(phone) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__text {
+      line-height: 1.5;
+      font-weight: 300;
+      margin-right: 5rem;
+
+      padding-left: 3rem;
+
+      @include respond(phone) {
+        font-size: 1.4rem;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--left {
+    border-radius: 0 0 0 1rem;
+    margin-bottom: 7rem;
+
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+
+    background-color: $color-primary;
+    filter: brightness(95%);
+
+    @include respond(phone) {
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+
+    &__header {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+
+      padding-left: 3rem;
+    }
+
+    &__pricing {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+
+      padding-left: 3rem;
+
+      span {
+        font-size: 1.6rem;
+        margin-left: 1rem;
+        font-weight: 300;
+      }
+    }
+
+    &__text {
+      margin-bottom: 3rem;
+      font-weight: 300;
+
+      padding-left: 3rem;
+    }
+
+    &__btn {
+      margin: 0 auto;
+      width: 75%;
+      border: none;
+      color: white;
+      font-weight: 700;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      border-radius: 0.6rem;
+      padding: 1.5rem 4rem;
+      background-color: $color-secondary;
+    }
+  }
+
+  &--right {
+    border-radius: 0 0 1rem 0;
+
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    background-color: $color-primary;
+
+    @include respond(phone) {
+      border-radius: 0 0 0 0;
+    }
+
+    &__header {
+      padding-left: 3rem;
+      margin-bottom: 2.5rem;
+      font-size: 1.8rem;
+    }
+
+    &__list {
+      width: 60%;
+      padding-left: 3rem;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      list-style: none;
+    }
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
