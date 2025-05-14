@@ -18,7 +18,7 @@
 <h3 align="center">Single Price Grid</h3>
 
   <p align="center">
-    completed frontend mentor challenge
+    A clean and responsive pricing grid card layout.
     <br />
     <br />
     <a href="https://devtruce.github.io/single-price-grid/" target="_blank">View Demo</a>
